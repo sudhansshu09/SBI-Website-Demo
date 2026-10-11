@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SBI Digital Banking — Premium Demo</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%2300a6e0'/><circle cx='50' cy='40' r='13' fill='white'/><path d='M43 48h14l5 34H38z' fill='white'/></svg>">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Reusable SBI-style emblem (keyhole logo) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sbi-logo" viewBox="0 0 100 100">
+    <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2cc4ff"/><stop offset="1" stop-color="#0066bf"/></linearGradient></defs>
+    <circle cx="50" cy="50" r="48" fill="url(#lg)"/>
+    <circle cx="50" cy="50" r="46" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
+    <circle cx="50" cy="39" r="12.5" fill="#fff"/>
+    <path d="M43.5 47h13l5.5 33H38z" fill="#fff"/>
+  </symbol>
+</svg>
+
+<div class="top-strip">
+  <div class="container d-flex justify-content-between align-items-center">
+    <span><i class="fa-solid fa-shield-halved me-2"></i>Secure Digital Banking</span>
+    <div class="top-links">
+      <a href="https://bank.sbi" target="_blank" rel="noopener"><i class="fa-solid fa-globe me-1"></i>New SBI Website (bank.sbi)</a>
+      <a href="https://onlinesbi.sbi" target="_blank" rel="noopener">OnlineSBI</a>
+      <a href="#help">Customer Care</a>
+      <a href="#branches">Branch Locator</a>
+      <a href="#careers">Careers</a>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark main-nav sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#home" aria-label="State Bank of India home">
+      <svg class="brand-logo" viewBox="0 0 100 100" aria-hidden="true"><use href="#sbi-logo"/></svg>
+      <span class="brand-text"><b>State Bank of India</b><small>Digital Banking Demo</small></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#explore">Explore</a></li>
+        <li class="nav-item"><a class="nav-link" href="#accounts">Accounts</a></li>
+        <li class="nav-item"><a class="nav-link" href="#invest">Where to Invest</a></li>
+        <li class="nav-item"><a class="nav-link" href="#digital">Digital Banking</a></li>
+        <li class="nav-item"><a class="nav-link" href="#partners">Group &amp; Partners</a></li>
+        <li class="nav-item"><a class="nav-link" href="#branches">Branches</a></li>
+      </ul>
+      <button class="btn btn-login" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa-solid fa-right-to-bracket me-2"></i>Login</button>
+    </div>
+  </div>
+</nav>
+
+<main id="home">
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="container position-relative">
+      <div class="row align-items-center min-vh-75">
+        <div class="col-lg-6 hero-copy">
+          <div class="eyebrow"><span></span> TRUSTED BANKING • DIGITAL FIRST</div>
+          <h1>Banking that moves<br><strong>with you.</strong></h1>
+          <p class="hero-text">Explore accounts, loans, cards, investments and secure digital banking through a modern SBI-inspired experience.</p>
+          <div class="hero-actions">
+            <a href="#explore" class="btn btn-primary-custom">Explore Banking <i class="fa-solid fa-arrow-right ms-2"></i></a>
+            <a href="https://bank.sbi" target="_blank" rel="noopener" class="btn btn-glass"><i class="fa-solid fa-arrow-up-right-from-square me-2"></i>Visit New SBI Website</a>
+          </div>
+          <div class="mini-trust">
+            <div><i class="fa-solid fa-circle-check"></i><span>Secure</span></div>
+            <div><i class="fa-solid fa-bolt"></i><span>Fast</span></div>
+            <div><i class="fa-solid fa-headset"></i><span>24×7 Help</span></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="visual-wrap">
+            <div class="glow"></div>
+            <div class="float-card float-one"><span class="float-icon"><i class="fa-solid fa-chart-line"></i></span><div><small>Digital Growth</small><strong>+42.8%</strong></div></div>
+            <div class="device-card">
+              <div class="device-top">
+                <span class="brand-dot d-flex align-items-center gap-2"><svg class="mini-logo" viewBox="0 0 100 100" aria-hidden="true"><use href="#sbi-logo"/></svg>SBI</span>
+                <span><i class="fa-solid fa-bell"></i> <i class="fa-solid fa-circle-user ms-3"></i></span>
+              </div>
+              <div class="device-content">
+                <p class="small-muted" id="greet">Good afternoon</p>
+                <h4>Welcome to your<br>digital banking</h4>
+                <div class="stat-grid">
+                  <div><small>Available Balance</small><b>₹ 2,84,200</b></div>
+                  <div><small>Recent Activity</small><b>12 items</b></div>
+                </div>
+                <div class="chart">
+                  <span style="height:28%"></span><span style="height:44%"></span><span style="height:38%"></span><span style="height:61%"></span><span style="height:54%"></span><span style="height:76%"></span><span style="height:92%"></span>
+                </div>
+              </div>
+              <div class="device-nav">
+                <span><i class="fa-solid fa-house"></i>Home</span><span><i class="fa-solid fa-wallet"></i>Pay</span><span><i class="fa-solid fa-chart-pie"></i>Insights</span><span><i class="fa-solid fa-user"></i>Profile</span>
+              </div>
+            </div>
+            <div class="float-card float-two"><span class="float-icon"><i class="fa-solid fa-users"></i></span><div><small>Customers</small><strong>50 Cr+</strong></div></div>
+            <div class="float-card float-three"><span class="float-icon"><i class="fa-solid fa-indian-rupee-sign"></i></span><div><small>Secure Payments</small><strong>24×7</strong></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPSULES -->
+  <section id="explore" class="capsule-section">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span>EXPLORE SBI</span>
+        <h2>Pick a service. Jump straight in.</h2>
+      </div>
+      <div class="capsule-wrap">
+        <a class="capsule" href="https://bank.sbi/web/personal-banking" target="_blank" rel="noopener"><i class="fa-solid fa-user"></i>Personal Banking<em class="fa-solid fa-arrow-up-right-from-square"></em></a>
+        <a class="capsule" href="https://onlinesbi.sbi" target="_blank" rel="noopener"><i class="fa-solid fa-laptop"></i>Internet Banking<em class="fa-solid fa-arrow-up-right-from-square"></em></a>
+        <a class="capsule" href="https://yonosbi.com" target="_blank" rel="noopener"><i class="fa-solid fa-mobile-screen-button"></i>YONO SBI<em class="fa-solid fa-arrow-up-right-from-square"></em></a>
+        <a class="capsule" href="https://bank.sbi/web/personal-banking" target="_blank" rel="noopener"><i class="fa-solid fa-house-chimney"></i>Home Loan<em class="fa-solid fa-arrow-up-right-from-square"></em></a>
+        <a class="capsule" href="https://bank.sbi/web/personal-banking" target="_blank" rel="noopener"><i class="fa-solid fa-car"></i>Car Loan<em class="fa-solid fa-arrow-up-right-from-square"></em></a>
+        <a class="capsule" href="https://bank.sbi/web/personal-banking" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i>Education Loan<em class="fa-solid fa-arrow-up-right-from-square"></em></a>
+        <a class="capsule" href="https://www.sbicard.com" target="_blank" rel="noopener"><i class="fa-solid fa-credit-card"></i>SBI Cards<em class="fa-solid fa-arrow-up-right-from-square"></em></a>
+        <a class="capsule" href="https://bank.sbi" target="_blank" rel="noopener"><i class="fa-solid fa-tractor"></i>Agriculture &amp; Rural<em class="fa-solid fa-arrow-up-right-from-square"></em></a>
+        <a class="capsule" href="https://bank.sbi" target="_blank" rel="noopener"><i class="fa-solid fa-shop"></i>SME Banking<em class="fa-solid fa-arrow-up-right-from-square"></em></a>
+        <a class="capsule" href="https://bank.sbi" target="_blank" rel="noopener"><i class="fa-solid fa-earth-asia"></i>NRI Services<em class="fa-solid fa-arrow-up-right-from-square"></em></a>
+        <a class="capsule" href="https://yonobusiness.sbi" target="_blank" rel="noopener"><i class="fa-solid fa-briefcase"></i>YONO Business<em class="fa-solid fa-arrow-up-right-from-square"></em></a>
+        <a class="capsule" href="https://sbiepay.sbi" target="_blank" rel="noopener"><i class="fa-solid fa-money-bill-transfer"></i>SBI ePay<em class="fa-solid fa-arrow-up-right-from-square"></em></a>
+        <a class="capsule" href="#invest"><i class="fa-solid fa-seedling"></i>Where to Invest<em class="fa-solid fa-arrow-down"></em></a>
+        <a class="capsule" href="#branches"><i class="fa-solid fa-location-dot"></i>Branch Locator<em class="fa-solid fa-arrow-down"></em></a>
+        <a class="capsule" href="#careers"><i class="fa-solid fa-user-tie"></i>Careers<em class="fa-solid fa-arrow-down"></em></a>
+        <a class="capsule" href="#help"><i class="fa-solid fa-headset"></i>Customer Care<em class="fa-solid fa-arrow-down"></em></a>
+      </div>
+      <div class="text-center mt-5">
+        <a href="https://bank.sbi" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fa-solid fa-globe me-2"></i>Open the New SBI Website — bank.sbi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK ACCESS -->
+  <section class="quick-section">
+    <div class="container">
+      <div class="section-heading text-center"><span>QUICK ACCESS</span><h2>Everything you need, in one place.</h2></div>
+      <div class="row g-4 equal-row">
+        <div class="col-6 col-lg-3"><a class="quick-card" href="https://bank.sbi/web/personal-banking" target="_blank" rel="noopener"><i class="fa-solid fa-piggy-bank"></i><h5>Open Account</h5><p>Explore savings options.</p></a></div>
+        <div class="col-6 col-lg-3"><a class="quick-card" href="https://bank.sbi/web/personal-banking" target="_blank" rel="noopener"><i class="fa-solid fa-house"></i><h5>Home Loan</h5><p>Plan your dream home.</p></a></div>
+        <div class="col-6 col-lg-3"><a class="quick-card" href="https://www.sbicard.com" target="_blank" rel="noopener"><i class="fa-solid fa-credit-card"></i><h5>Cards</h5><p>Discover card services.</p></a></div>
+        <div class="col-6 col-lg-3"><a class="quick-card" href="#help"><i class="fa-solid fa-headset"></i><h5>Customer Care</h5><p>Get help whenever you need.</p></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCOUNTS -->
+  <section id="accounts" class="content-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <span class="section-label">BANKING PRODUCTS</span>
+          <h2 class="display-title">Choose a banking experience built for your goals.</h2>
+          <p class="text-muted-dark">From everyday savings to home and auto loans, pick the product that fits where you are in life.</p>
+        </div>
+        <div class="col-lg-7">
+          <div class="product-grid">
+            <div class="product-card"><i class="fa-solid fa-building-columns"></i><h4>Savings Account</h4><p>Everyday banking with digital convenience.</p><a href="https://bank.sbi/web/personal-banking" target="_blank" rel="noopener">Explore <i class="fa-solid fa-arrow-right"></i></a></div>
+            <div class="product-card"><i class="fa-solid fa-house-chimney"></i><h4>Home Loans</h4><p>Solutions designed around your home goals.</p><a href="https://bank.sbi/web/personal-banking" target="_blank" rel="noopener">Explore <i class="fa-solid fa-arrow-right"></i></a></div>
+            <div class="product-card"><i class="fa-solid fa-car"></i><h4>Auto Loans</h4><p>Make your next journey easier to finance.</p><a href="https://bank.sbi/web/personal-banking" target="_blank" rel="noopener">Explore <i class="fa-solid fa-arrow-right"></i></a></div>
+            <div class="product-card"><i class="fa-solid fa-mobile-screen-button"></i><h4>Digital Banking</h4><p>Manage banking services from your device.</p><a href="#digital">Explore <i class="fa-solid fa-arrow-right"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE TO INVEST -->
+  <section id="invest" class="invest-section">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span class="light-label">WHERE TO INVEST</span>
+        <h2 class="text-white">Grow your money, your way.</h2>
+        <p class="light-muted mx-auto">Deposits, mutual funds, pension and insurance — all from the SBI family.</p>
+      </div>
+      <div class="row g-4 equal-row">
+        <div class="col-md-6 col-lg-3"><a class="invest-card" href="https://bank.sbi/web/personal-banking" target="_blank" rel="noopener"><span class="tag">Safe &amp; Steady</span><i class="fa-solid fa-vault"></i><h5>Fixed Deposits</h5><p>Lock in a tenure that suits you with predictable returns.</p><b>Explore <i class="fa-solid fa-arrow-right"></i></b></a></div>
+        <div class="col-md-6 col-lg-3"><a class="invest-card" href="https://bank.sbi/web/personal-banking" target="_blank" rel="noopener"><span class="tag">Monthly Habit</span><i class="fa-solid fa-calendar-check"></i><h5>Recurring Deposits</h5><p>Save a fixed amount every month and build a corpus.</p><b>Explore <i class="fa-solid fa-arrow-right"></i></b></a></div>
+        <div class="col-md-6 col-lg-3"><a class="invest-card" href="https://www.sbimf.com" target="_blank" rel="noopener"><span class="tag">Market Linked</span><i class="fa-solid fa-chart-line"></i><h5>Mutual Funds &amp; SIP</h5><p>Start a SIP with SBI Mutual Fund for long-term goals.</p><b>SBI Mutual Fund <i class="fa-solid fa-arrow-up-right-from-square"></i></b></a></div>
+        <div class="col-md-6 col-lg-3"><a class="invest-card" href="https://www.sbipensionfunds.com" target="_blank" rel="noopener"><span class="tag">Retirement</span><i class="fa-solid fa-umbrella-beach"></i><h5>NPS &amp; Pension</h5><p>Plan a regular income for your retirement years.</p><b>SBI Pension Funds <i class="fa-solid fa-arrow-up-right-from-square"></i></b></a></div>
+        <div class="col-md-6 col-lg-3"><a class="invest-card" href="https://www.sbilife.co.in" target="_blank" rel="noopener"><span class="tag">Protection</span><i class="fa-solid fa-heart-pulse"></i><h5>Life Insurance</h5><p>Protect your family while building long-term savings.</p><b>SBI Life <i class="fa-solid fa-arrow-up-right-from-square"></i></b></a></div>
+        <div class="col-md-6 col-lg-3"><a class="invest-card" href="https://www.sbigeneral.in" target="_blank" rel="noopener"><span class="tag">Cover</span><i class="fa-solid fa-shield-heart"></i><h5>General Insurance</h5><p>Health, motor and home cover from SBI General.</p><b>SBI General <i class="fa-solid fa-arrow-up-right-from-square"></i></b></a></div>
+        <div class="col-md-6 col-lg-3"><a class="invest-card" href="https://www.sbisecurities.in" target="_blank" rel="noopener"><span class="tag">Trading</span><i class="fa-solid fa-arrow-trend-up"></i><h5>Demat &amp; Trading</h5><p>Invest in stocks and IPOs through SBICAP Securities.</p><b>SBI Securities <i class="fa-solid fa-arrow-up-right-from-square"></i></b></a></div>
+        <div class="col-md-6 col-lg-3"><a class="invest-card" href="https://yonosbi.com" target="_blank" rel="noopener"><span class="tag">All in one</span><i class="fa-solid fa-mobile-screen-button"></i><h5>Invest on YONO</h5><p>Banking, insurance and investments in one app.</p><b>YONO SBI <i class="fa-solid fa-arrow-up-right-from-square"></i></b></a></div>
+      </div>
+
+      <!-- Calculator -->
+      <div class="calc-box mt-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <div class="calc-tabs">
+              <button class="active" data-mode="sip">SIP</button>
+              <button data-mode="fd">Fixed Deposit</button>
+            </div>
+            <div class="calc-row"><label><span id="l1">Monthly investment</span><b id="v1"></b></label><input type="range" id="r1"></div>
+            <div class="calc-row"><label><span>Expected annual return</span><b id="v2"></b></label><input type="range" id="r2" min="1" max="20" step="0.5" value="10"></div>
+            <div class="calc-row"><label><span>Time period</span><b id="v3"></b></label><input type="range" id="r3" min="1" max="30" step="1" value="10"></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="calc-result">
+              <small>Estimated value</small>
+              <div class="big" id="resTotal">₹ 0</div>
+              <div class="calc-bar"><span id="barInvested"></span></div>
+              <div class="calc-legend"><div><i class="dot a"></i>Invested <b id="resInvested"></b></div><div><i class="dot b"></i>Est. returns <b id="resGain"></b></div></div>
+              <p class="calc-note">Illustrative calculation only. Not a rate quote or investment advice — mutual funds are subject to market risks. Check current rates on the official SBI site.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIGITAL -->
+  <section id="digital" class="dark-section">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6">
+          <span class="section-label light">DIGITAL BANKING</span>
+          <h2 class="display-title light-text">A clean dashboard for modern banking.</h2>
+          <p class="light-muted">Pay, transfer, invest and track — with a dark premium dashboard, live insights and responsive mobile behavior.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="https://onlinesbi.sbi" target="_blank" rel="noopener" class="btn btn-primary-custom">OnlineSBI</a>
+            <a href="https://yonosbi.com" target="_blank" rel="noopener" class="btn btn-glass">YONO SBI</a>
+            <button class="btn btn-glass" data-bs-toggle="modal" data-bs-target="#helpModal">Get Customer Help</button>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="dark-dashboard">
+            <div class="dash-head"><span>Account Overview</span><span class="live-dot">● Live</span></div>
+            <div class="dash-number">₹ 4,28,650 <small>+8.4%</small></div>
+            <svg class="dash-chart" viewBox="0 0 400 110" preserveAspectRatio="none" aria-hidden="true">
+              <defs><linearGradient id="dg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2bbcff" stop-opacity=".35"/><stop offset="1" stop-color="#2bbcff" stop-opacity="0"/></linearGradient></defs>
+              <path d="M0 90 L50 76 L100 82 L150 58 L200 64 L250 38 L300 46 L350 20 L400 12 L400 110 L0 110Z" fill="url(#dg)"/>
+              <path d="M0 90 L50 76 L100 82 L150 58 L200 64 L250 38 L300 46 L350 20 L400 12" fill="none" stroke="#2bbcff" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+            </svg>
+            <div class="dash-stats"><div><small>Payments</small><b>₹ 28,420</b></div><div><small>Deposits</small><b>₹ 85,000</b></div><div><small>Goals</small><b>72%</b></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section id="partners" class="partners-section">
+    <div class="container">
+      <div class="section-heading text-center"><span>SBI GROUP &amp; PARTNERS</span><h2>Trusted by an entire ecosystem.</h2><p class="partners-sub">SBI group companies and the payment networks that power everyday banking.</p></div>
+    </div>
+    <div class="marquee" aria-label="SBI group and partner companies">
+      <div class="marquee-track" id="marqueeTrack">
+        <!-- set 1 -->
+        <a class="plogo" href="https://www.sbimf.com" target="_blank" rel="noopener"><b style="--c:#0a55a5">SBI</b><span>Mutual Fund</span></a>
+        <a class="plogo" href="https://www.sbilife.co.in" target="_blank" rel="noopener"><b style="--c:#0a7bd1">SBI</b><span>Life Insurance</span></a>
+        <a class="plogo" href="https://www.sbigeneral.in" target="_blank" rel="noopener"><b style="--c:#1d8fe0">SBI</b><span>General</span></a>
+        <a class="plogo" href="https://www.sbicard.com" target="_blank" rel="noopener"><b style="--c:#5b2d90">SBI</b><span>Card</span></a>
+        <a class="plogo" href="https://www.sbipensionfunds.com" target="_blank" rel="noopener"><b style="--c:#0f9d8a">SBI</b><span>Pension Funds</span></a>
+        <a class="plogo" href="https://www.sbicaps.com" target="_blank" rel="noopener"><b style="--c:#c27a0e">SBICAP</b><span>Capital Markets</span></a>
+        <a class="plogo" href="https://www.sbisecurities.in" target="_blank" rel="noopener"><b style="--c:#d4380d">SBICAP</b><span>Securities</span></a>
+        <a class="plogo" href="https://www.npci.org.in" target="_blank" rel="noopener"><b style="--c:#e07a1f">UPI</b><span>NPCI</span></a>
+        <a class="plogo" href="https://www.npci.org.in" target="_blank" rel="noopener"><b style="--c:#1a5fb4">RuPay</b><span>NPCI</span></a>
+        <a class="plogo" href="https://www.irctc.co.in" target="_blank" rel="noopener"><b style="--c:#d6336c">IRCTC</b><span>Rail Booking</span></a>
+        <a class="plogo" href="https://www.visa.co.in" target="_blank" rel="noopener"><b style="--c:#1a1f71">VISA</b><span>Cards</span></a>
+        <a class="plogo" href="https://www.mastercard.co.in" target="_blank" rel="noopener"><b style="--c:#eb001b">Mastercard</b><span>Cards</span></a>
+      </div>
+    </div>
+    <p class="text-center partner-note">Tiles are text badges, not official logos. Replace them with official logo files before any public use.</p>
+  </section>
+
+  <!-- BRANCH -->
+  <section id="branches" class="content-section">
+    <div class="container">
+      <div class="section-heading"><span>BRANCH LOCATOR</span><h2>Find an SBI branch near you.</h2></div>
+      <div class="branch-card">
+        <div>
+          <span class="branch-tag">PATNA • BIHAR</span>
+          <h3>Patna Main Branch</h3>
+          <p><i class="fa-solid fa-location-dot me-2"></i>West Gandhi Maidan, Patna, Bihar — 800001</p>
+          <p><i class="fa-solid fa-code-branch me-2"></i>Branch Code: 152</p>
+        </div>
+        <button class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#branchModal">View Branch</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECURITY -->
+  <section class="security-section">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-4"><span class="section-label">STAY SAFE</span><h2 class="display-title" style="font-size:36px">Bank safely, every time.</h2></div>
+        <div class="col-lg-8">
+          <div class="row g-3">
+            <div class="col-md-4"><div class="safe-card"><i class="fa-solid fa-key"></i><h6>Never share OTP / PIN</h6><p>SBI never asks for your OTP, PIN or password.</p></div></div>
+            <div class="col-md-4"><div class="safe-card"><i class="fa-solid fa-link"></i><h6>Check the URL</h6><p>Use only official SBI addresses like bank.sbi and onlinesbi.sbi.</p></div></div>
+            <div class="col-md-4"><div class="safe-card"><i class="fa-solid fa-phone"></i><h6>Report fraud fast</h6><p>Contact customer care immediately if something looks wrong.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREERS -->
+  <section id="careers" class="careers-section">
+    <div class="container">
+      <div class="career-box">
+        <div>
+          <span class="section-label">CAREERS / HR</span>
+          <h2>Build your career with SBI.</h2>
+          <p>For this demo, the HR contact is represented as the official Careers / HR Desk.</p>
+        </div>
+        <a class="btn btn-light-custom" href="https://sbi.co.in/web/careers" target="_blank" rel="noopener">SBI Careers <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="help">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <svg class="footer-logo" viewBox="0 0 100 100" aria-hidden="true"><use href="#sbi-logo"/></svg>
+        <h5>State Bank of India</h5>
+        <p class="footer-muted">Premium front-end demo for portfolio / UI project presentation. Not an official SBI website.</p>
+        <div class="social"><a aria-label="Facebook" href="https://www.facebook.com/StateBankOfIndia" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a><a href="https://x.com/TheOfficialSBI" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a><a href="https://www.instagram.com/sbi.official" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/@StateBankofIndia" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a><a href="https://www.linkedin.com/company/state-bank-of-india" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a></div>
+      </div>
+      <div class="col-6 col-lg-2"><h6>Services</h6><a href="#accounts">Accounts</a><a href="#invest">Where to Invest</a><a href="#digital">Digital Banking</a></div>
+      <div class="col-6 col-lg-2"><h6>Official Sites</h6><a href="https://bank.sbi" target="_blank" rel="noopener">bank.sbi</a><a href="https://onlinesbi.sbi" target="_blank" rel="noopener">onlinesbi.sbi</a><a href="https://yonobusiness.sbi" target="_blank" rel="noopener">yonobusiness.sbi</a></div>
+      <div class="col-lg-4">
+        <h6>Customer Care</h6>
+        <a href="tel:18001234">1800 1234</a><a href="tel:18002100">1800 2100</a><a href="mailto:customercare@sbi.co.in">customercare@sbi.co.in</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 SBI-inspired portfolio demo</span><span>Not an official SBI website</span></div>
+  </div>
+</footer>
+
+<!-- Floating help -->
+<div class="help-widget">
+  <button id="helpToggle" class="help-button" aria-expanded="false" aria-controls="helpPanel"><i class="fa-solid fa-headset"></i><span>Help</span></button>
+  <div id="helpPanel" class="help-panel">
+    <div class="help-head"><strong>How can we help?</strong><button id="helpClose" aria-label="Close help">×</button></div>
+    <a href="tel:18001234"><i class="fa-solid fa-phone"></i> Customer Care <b>1800 1234</b></a>
+    <a href="tel:18002100"><i class="fa-solid fa-phone-volume"></i> Customer Care <b>1800 2100</b></a>
+    <a href="mailto:customercare@sbi.co.in"><i class="fa-solid fa-envelope"></i> Email Support</a>
+    <button class="help-action" data-bs-toggle="modal" data-bs-target="#branchModal"><i class="fa-solid fa-location-dot"></i> Find Branch</button>
+  </div>
+</div>
+
+<!-- Modals -->
+<div class="modal fade" id="loginModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content custom-modal">
+  <div class="modal-header border-0"><h4>Secure Login</h4><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+  <div class="modal-body">
+    <div class="demo-warning"><i class="fa-solid fa-shield-halved"></i> Demo only — do not enter real banking credentials.</div>
+    <label>Username</label><input class="form-control demo-input" placeholder="Enter username" autocomplete="off">
+    <label class="mt-3">Password</label><input type="password" class="form-control demo-input" placeholder="Enter password" autocomplete="off">
+    <button class="btn btn-primary-custom w-100 mt-4" id="demoLogin">Continue</button>
+    <a href="https://onlinesbi.sbi" target="_blank" rel="noopener" class="d-block text-center mt-3 small login-real">Go to the official OnlineSBI login <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+  </div>
+</div></div></div>
+
+<div class="modal fade" id="branchModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content custom-modal">
+  <div class="modal-header border-0"><h4>Branch Locator</h4><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+  <div class="modal-body">
+    <div class="branch-modal-icon"><i class="fa-solid fa-location-dot"></i></div>
+    <h5>Patna Main Branch</h5><p>West Gandhi Maidan, Patna, Bihar — 800001</p><p><b>Branch Code:</b> 152</p>
+    <a href="https://www.google.com/maps/search/?api=1&query=SBI+Patna+Main+Branch+West+Gandhi+Maidan+Patna" target="_blank" rel="noopener" class="btn btn-primary-custom w-100">Open Map</a>
+  </div>
+</div></div></div>
+
+<div class="modal fade" id="helpModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content custom-modal">
+  <div class="modal-header border-0"><h4>Customer Help</h4><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+  <div class="modal-body">
+    <p>Use the official customer-care channels below.</p>
+    <div class="contact-row"><i class="fa-solid fa-phone"></i><div><small>Customer Care</small><strong>1800 1234</strong></div></div>
+    <div class="contact-row"><i class="fa-solid fa-phone"></i><div><small>Customer Care</small><strong>1800 2100</strong></div></div>
+    <div class="contact-row"><i class="fa-solid fa-envelope"></i><div><small>Email</small><strong>customercare@sbi.co.in</strong></div></div>
+  </div>
+</div></div></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
